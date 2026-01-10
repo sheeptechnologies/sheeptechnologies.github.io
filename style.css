@@ -213,6 +213,13 @@ a {
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     color: #ffffff !important;
     /* Force white text */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.github-icon {
+    display: none;
 }
 
 .btn-primary.small:hover {
@@ -791,6 +798,24 @@ a {
         padding-right: 1rem;
     }
 
+    .github-icon {
+        display: block;
+    }
+
+    .nav-github-btn .btn-text {
+        display: none;
+    }
+
+    .nav-github-btn.btn-primary.small {
+        padding: 0.5rem;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .hero-sub {
         font-size: 1.1rem;
         padding: 0 1.5rem;
@@ -806,7 +831,30 @@ a {
     }
 
     .nav-container {
+        justify-content: space-between;
+        padding-right: 1rem;
+        /* Ensure padding on the right */
+    }
+
+    .nav-github-btn.btn-primary.small {
+        padding: 0;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
         justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        /* Glass morphism base */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+        margin-left: 0;
+        /* Align strictly */
+    }
+
+    .nav-github-btn.btn-primary.small:hover {
+        background: rgba(59, 130, 246, 0.2);
+        border-color: rgba(59, 130, 246, 0.4);
     }
 
     .section-header h2 {
