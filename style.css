@@ -476,6 +476,115 @@ a {
     color: #fff;
 }
 
+/* Featured Card (Crader) - Slightly larger and highlighted */
+.stack-card.featured-card {
+    transform: scale(1.05);
+    border-color: rgba(96, 165, 250, 0.3);
+    background: linear-gradient(180deg, rgba(30, 58, 138, 0.25), rgba(15, 23, 42, 0.5));
+    box-shadow:
+        0 0 40px rgba(59, 130, 246, 0.15) inset,
+        0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.stack-card.featured-card::after {
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.4), rgba(34, 211, 238, 0.2));
+}
+
+.stack-card.featured-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(59, 130, 246, 0.2) inset;
+}
+
+/* Roadmap Badge - Premium Tech Tab Design */
+.roadmap-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fb923c;
+    border: 1px solid rgba(251, 146, 60, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    width: fit-content;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(251, 146, 60, 0.1);
+    transition: all 0.3s ease;
+    font-family: monospace;
+}
+
+.roadmap-badge::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fb923c;
+    box-shadow: 0 0 6px rgba(251, 146, 60, 0.8);
+    animation: techPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes techPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+.card:hover .roadmap-badge {
+    border-color: rgba(251, 146, 60, 0.8);
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(251, 146, 60, 0.15);
+    color: #fff;
+}
+
+/* Roadmap Cards - Special Styling */
+.stack-card:has(.roadmap-badge) {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.5), rgba(30, 27, 75, 0.3));
+    border-color: rgba(251, 146, 60, 0.1);
+    position: relative;
+}
+
+.stack-card:has(.roadmap-badge)::after {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.15), rgba(59, 130, 246, 0.1));
+}
+
+.stack-card:has(.roadmap-badge):hover {
+    border-color: rgba(251, 146, 60, 0.25);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(251, 146, 60, 0.08) inset;
+}
+
+.stack-card:has(.roadmap-badge) .card-icon {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.12), rgba(251, 146, 60, 0.02));
+    border-color: rgba(251, 146, 60, 0.15);
+}
+
+.stack-card:has(.roadmap-badge) .card-icon svg {
+    stroke: #fb923c;
+}
+
 
 /* Vision Section */
 .vision {
