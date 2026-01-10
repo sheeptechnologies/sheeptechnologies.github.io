@@ -17,14 +17,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((el) => observer.observe(el));
 
-    // Dynamic mouse tracking for card glow effect
-    document.querySelectorAll(".card").forEach((card) => {
-        card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty("--mouse-x", `${x}px`);
-            card.style.setProperty("--mouse-y", `${y}px`);
+    // Dynamic mouse tracking for card glow effect - Only on devices with hover capability
+    if (window.matchMedia('(hover: hover)').matches) {
+        document.querySelectorAll(".card").forEach((card) => {
+            card.addEventListener("mousemove", (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                requestAnimationFrame(() => {
+                    card.style.setProperty("--mouse-x", `${x}px`);
+                    card.style.setProperty("--mouse-y", `${y}px`);
+                });
+            });
         });
-    });
+    }
 });

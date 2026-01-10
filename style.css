@@ -30,6 +30,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 /* Dynamic background blobs */
@@ -44,6 +46,7 @@ body::after {
     z-index: -2;
     opacity: 0.3;
     animation: blobFloat 20s infinite alternate;
+    will-change: transform;
 }
 
 body::before {
@@ -59,6 +62,7 @@ body::after {
     bottom: -20%;
     right: -10%;
     animation-delay: -10s;
+    will-change: transform;
 }
 
 @keyframes blobFloat {
@@ -201,6 +205,21 @@ a {
     box-shadow: 0 0 40px rgba(96, 165, 250, 0.6);
 }
 
+.btn-primary.small {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    color: #ffffff !important;
+    /* Force white text */
+}
+
+.btn-primary.small:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+}
+
 .btn-primary:hover::before {
     opacity: 1;
 }
@@ -250,6 +269,7 @@ a {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 5s linear infinite;
+    will-change: background-position;
 }
 
 @keyframes shine {
@@ -294,7 +314,7 @@ a {
 /* Grid & Cards - Premium Blue Glass */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     /* Slightly wider cards */
     gap: 2rem;
 }
@@ -607,9 +627,37 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+/* Vision Illustration */
+.vision-illustration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.vision-svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.1));
+    transition: transform 0.5s ease;
+}
+
+.vision-svg:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .vision-svg {
+        max-height: 400px;
+    }
+}
+
 .vision-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-bottom: 5rem;
 }
@@ -735,14 +783,69 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-/* Mobile */
+/* Mobile Optimization */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-sub {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
     }
 
     .card {
         padding: 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        /* Consider a hamburger menu for full implementation, simplified for now */
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .vision-header h2 {
+        font-size: 2rem;
+    }
+
+    .manifesto-quote {
+        font-size: 1.8rem;
+    }
+
+    .footer-cta h3 {
+        font-size: 2.5rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+        width: 80%;
+        margin: 0;
+    }
+
+    .stack-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stack-card.featured-card {
+        order: -1;
     }
 }
 
