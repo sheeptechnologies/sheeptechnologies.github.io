@@ -326,6 +326,32 @@ a {
     gap: 2rem;
 }
 
+
+
+@media (min-width: 1100px) {
+    .stack-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 1.5rem;
+    }
+
+    .stack-card {
+        flex: 0 1 31%;
+        /* 3 items per row with gaps */
+        max-width: 32%;
+    }
+
+    .stack-card.featured-card {
+        margin-top: 0;
+        margin-bottom: 0;
+        transform: scale(1.05);
+        /* Restore scale enhancement */
+    }
+}
+
 .card {
     background: rgba(15, 23, 42, 0.4);
     /* Slate-900 transparent */
@@ -590,6 +616,10 @@ a {
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.5), rgba(30, 27, 75, 0.3));
     border-color: rgba(251, 146, 60, 0.1);
     position: relative;
+    min-height: 480px;
+    /* Force consistent height for horizontal alignment */
+    display: flex;
+    flex-direction: column;
 }
 
 .stack-card:has(.roadmap-badge)::after {
@@ -611,6 +641,80 @@ a {
 .stack-card:has(.roadmap-badge) .card-icon svg {
     stroke: #fb923c;
 }
+
+
+
+/* Philosophy Section - Minimalist & Direct */
+.philosophy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Specific colorful header for Philosophy */
+.philosophy .section-header h2 {
+    background: linear-gradient(to right, #60a5fa, #22d3ee);
+    /* Blue to Cyan */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    /* Slightly larger */
+    margin-bottom: 1rem;
+}
+
+.philosophy-subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #cbd5e1;
+    font-weight: 300;
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.philosophy-content {
+    /* No card styling - Direct text */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.philosophy-content::before {
+    display: none;
+}
+
+/* Quote styling removed as it is now subtitle */
+
+/* Body text - clean and highly readable */
+.philosophy-content p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    /* Slate-400 */
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    text-align: center;
+    /* Center alignment for a flow */
+    max-width: 100%;
+}
+
+.philosophy-content strong {
+    color: #fff;
+    /* White for emphasis */
+    font-weight: 600;
+}
+
+/* CTA - Simple and clean */
+.philosophy-cta {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 0;
+}
+
 
 
 /* Vision Section */
@@ -899,8 +1003,21 @@ a {
 
 /* Use Cases Specific Styles */
 .use-case-card {
-    border-top: 2px solid rgba(255, 255, 255, 0.05);
-    /* Default top border */
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(180deg, rgba(51, 65, 85, 0.25), rgba(71, 85, 105, 0.1));
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(148, 163, 184, 0.05);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.use-case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(180deg, rgba(51, 65, 85, 0.35), rgba(71, 85, 105, 0.2));
+    border-top-color: rgba(96, 165, 250, 0.4);
 }
 
 .coming-soon-badge {
@@ -920,15 +1037,16 @@ a {
 
 /* Number badge */
 .use-case-number {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 4rem;
+    font-weight: 900;
     color: rgba(255, 255, 255, 0.05);
     line-height: 1;
     position: absolute;
-    top: 1rem;
+    top: 1.5rem;
     right: 1.5rem;
     pointer-events: none;
     transition: color 0.3s;
+    font-family: var(--font-stack);
 }
 
 .use-case-card:hover .use-case-number {
@@ -937,20 +1055,184 @@ a {
 
 .use-case-sub {
     font-family: monospace;
-    color: var(--secondary-accent);
-    font-size: 0.85rem;
+    color: #93c5fd;
+    /* Light Blue 300 - Serene accent */
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    display: block;
+    font-weight: 600;
 }
 
 .use-case-content p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 0.8rem;
-    line-height: 1.5;
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    line-height: 1.7;
 }
+
+.use-case-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #f1f5f9;
+    /* Slate 100 */
+    font-weight: 700;
+}
+
+
 
 .use-case-content strong {
     color: #fff;
+}
+
+/* Beta Ribbon */
+.beta-ribbon {
+    position: absolute;
+    top: 25px;
+    right: -60px;
+    width: 200px;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    /* Green-600 to Green-700 */
+    color: #ffffff;
+    padding: 8px 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(45deg);
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.3),
+        0 4px 10px rgba(22, 163, 74, 0.3);
+    z-index: 20;
+    letter-spacing: 0.2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.beta-ribbon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.2) 50%, transparent 60%);
+    background-size: 200% 200%;
+    animation: shine 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* White pulse dot */
+.beta-ribbon::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    animation: techPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.stack-card.featured-card:hover .beta-ribbon {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(34, 197, 94, 0.4);
+}
+
+/* Manifest Page */
+.manifest-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px 2rem 6rem;
+}
+
+.manifest-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.manifest-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-accent);
+    margin: 2rem auto 0;
+    border-radius: 2px;
+}
+
+.manifest-meta {
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+.manifest-body {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+    /* Slate-200 */
+}
+
+.manifest-section {
+    margin-bottom: 4rem;
+}
+
+.manifest-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.manifest-section p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.manifest-section strong {
+    color: var(--primary-accent);
+}
+
+.manifest-highlight-box {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid var(--primary-accent);
+    padding: 2rem;
+    border-radius: 0 12px 12px 0;
+    margin: 2.5rem 0;
+    font-style: italic;
+    color: #93c5fd;
+}
+
+.manifest-footer {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: right;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--secondary-accent);
+}
+
+.manifest-nav-active {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+}
+
+.manifest-nav-active::after {
+    width: 100%;
 }

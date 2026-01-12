@@ -55,17 +55,19 @@
         <div class="container">
             <div class="section-header hidden">
                 <h2>Our Core Belief</h2>
-                <p class="subtitle">Intelligence Needs Roots</p>
+                <p class="subtitle philosophy-subtitle">"Raw intelligence is becoming a commodity. The true value lies
+                    in the architecture you build around it."</p>
             </div>
             <div class="philosophy-content hidden">
                 <p>
-                    We are on the verge of a paradigm shift. LLMs have mastered thought, but they stumble on context.
-                    To scale Artificial General Intelligence, we don't need bigger brains. We need deeper access to raw
-                    reality.
+                    Current AI models are powerful engines spinning in a vacuum. Without secure access to your code,
+                    database, and internal state, they are limited.
+                    <strong>Sheep bridges this gap.</strong> We provide the primitives to decouple reasoning from
+                    execution, giving the AI "hands" to work while keeping the controls in yours.
                 </p>
-                <p>
-                    <strong>If LLMs are the processors, Sheep is the system bus.</strong>
-                </p>
+                <div class="philosophy-cta">
+                    <a href="manifest.html" class="btn-secondary small">Read our Manifesto</a>
+                </div>
             </div>
         </div>
     </section>
@@ -78,43 +80,51 @@
             </div>
 
             <div class="grid stack-grid">
+                <!-- 1. Crook (Roadmap) -->
                 <div class="card stack-card hidden">
                     <div class="roadmap-badge">In roadmap</div>
                     <div class="card-header">
                         <div class="card-icon">
-                            <!-- Network/Router Icon -->
-                            <svg viewBox="0 0 24 24">
-                                <rect x="16" y="16" width="6" height="6" rx="1"></rect>
-                                <rect x="2" y="16" width="6" height="6" rx="1"></rect>
-                                <rect x="9" y="2" width="6" height="6" rx="1"></rect>
-                                <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
-                                <path d="M12 12V8"></path>
+                            <!-- Database Icon -->
+                            <!-- Magnifying Glass Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
                         </div>
                         <div>
-                            <h3>Grazer</h3>
-                            <p class="card-role">The Context Router</p>
+                            <h3>Crook</h3>
+                            <p class="card-role">The Data Interface</p>
                         </div>
                     </div>
                     <p class="card-desc">
-                        The neural router for sources of truth. Whether it's legacy docs, markdown specs, or raw PDFs,
-                        Grazer ingests and filters noise to feed agents a unified, high-signal stream of context.
+                        <strong>The Data Interface</strong>
+                        Maps rigid SQL schemas into cognitive maps for AI. Enables agents to autonomously explore data
+                        structures, define business metrics, and execute precision queries against production databases.
                     </p>
-                    <a href="https://github.com/sheeptechnologies/grazer" target="_blank"
-                        class="card-link main-link">View Grazer Repository &rarr;</a>
+                    <a href="https://github.com/sheeptechnologies/crook" target="_blank"
+                        class="card-link main-link">View Crook Repository &rarr;</a>
                 </div>
 
+                <!-- 2. Crader (Featured, Center) -->
                 <div class="card stack-card featured-card hidden">
+                    <div class="beta-ribbon">Beta</div>
                     <div class="card-header">
                         <div class="card-icon">
                             <!-- Brain/Circuit Icon -->
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z">
-                                </path>
-                                <path
-                                    d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z">
-                                </path>
+                            <!-- Advanced Network Graph Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <circle cx="6" cy="6" r="2"></circle>
+                                <circle cx="18" cy="6" r="2"></circle>
+                                <circle cx="6" cy="18" r="2"></circle>
+                                <circle cx="18" cy="18" r="2"></circle>
+                                <path d="M10 10l-2.5-2.5"></path>
+                                <path d="M14 10l2.5-2.5"></path>
+                                <path d="M10 14l-2.5 2.5"></path>
+                                <path d="M14 14l2.5 2.5"></path>
                             </svg>
                         </div>
                         <div>
@@ -124,8 +134,10 @@
                     </div>
 
                     <p class="card-desc">
-                        A graph-native indexing engine. It transcends text search to map semantic dependencies,
-                        giving agents the "peripheral vision" needed to refactor complex systems without breaking them.
+                        <strong>The Codebase Cortex</strong>
+                        Transforms source code into a queryable Code Property Graph (CPG) with semantic embeddings. It
+                        gives agents the structural intelligence to navigate and refactor complex repositories without
+                        hallucinations.
                     </p>
 
                     <div class="engine-section">
@@ -142,29 +154,89 @@
                         class="card-link main-link">View Crader Repository &rarr;</a>
                 </div>
 
+                <!-- 3. Collie (Roadmap) -->
                 <div class="card stack-card hidden">
                     <div class="roadmap-badge">In roadmap</div>
                     <div class="card-header">
                         <div class="card-icon">
+                            <!-- Discovery/Search Icon -->
+                            <!-- Plug Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22v-5"></path>
+                                <path d="M9 8V2"></path>
+                                <path d="M15 8V2"></path>
+                                <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Collie</h3>
+                            <p class="card-role">The MCP Manager</p>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        <strong>The MCP Manager</strong>
+                        A dynamic registry for agent capabilities. It routes tasks to existing tools or triggers Code
+                        Mode to autonomously generate, test, and install new skills on the fly.
+                    </p>
+                    <a href="https://github.com/sheeptechnologies/collie" target="_blank"
+                        class="card-link main-link">View Collie Repository &rarr;</a>
+                </div>
+
+                <!-- 4. Silo (Roadmap) -->
+                <div class="card stack-card hidden">
+                    <div class="roadmap-badge">In roadmap</div>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <!-- Anchor Icon -->
                             <!-- Database Icon -->
-                            <svg viewBox="0 0 24 24">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                                 <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
                                 <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3>Crook</h3>
-                            <p class="card-role">The Data Interface</p>
+                            <h3>Silo</h3>
+                            <p class="card-role">The State Anchor</p>
                         </div>
                     </div>
                     <p class="card-desc">
-                        The bridge between reasoning and rigid SQL structures. Transforms database schemas into
-                        cognitive maps,
-                        allowing agents to autonomously explore, query, and verify production data.
+                        <strong>The State Anchor</strong>
+                        The system's backbone for persistence and connectivity. It manages secure connection pools and
+                        serializes agent memory, ensuring long-term context and state continuity across sessions.
                     </p>
-                    <a href="https://github.com/sheeptechnologies/crook" target="_blank"
-                        class="card-link main-link">View Crook Repository &rarr;</a>
+                    <a href="https://github.com/sheeptechnologies/silo" target="_blank" class="card-link main-link">View
+                        Silo Repository &rarr;</a>
+                </div>
+
+                <!-- 5. Grazer (Roadmap) -->
+                <div class="card stack-card hidden">
+                    <div class="roadmap-badge">In roadmap</div>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <!-- Network/Router Icon -->
+                            <!-- CLI Control Icon -->
+                            <!-- Terminal Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Grazer</h3>
+                            <p class="card-role">The Control Plane</p>
+                        </div>
+                    </div>
+                    <p class="card-desc">
+                        <strong>The Control Plane</strong>
+                        The unified CLI that orchestrates the entire Sheep ecosystem. A single interface to command
+                        indexing, data retrieval, tool fabrication, and state management.
+                    </p>
+                    <a href="https://github.com/sheeptechnologies/grazer" target="_blank"
+                        class="card-link main-link">View Grazer Repository &rarr;</a>
                 </div>
             </div>
         </div>
@@ -181,14 +253,16 @@
                 <div class="card use-case-card hidden">
                     <div class="use-case-number">01</div>
                     <div class="use-case-body">
-                        <h3>Molecular Enterprise</h3>
-                        <p class="use-case-sub">The Block Paradigm</p>
+                        <h3>The Sovereign Copilot</h3>
+                        <p class="use-case-sub">Your Code. Your Infrastructure. Zero Leaks.</p>
                         <div class="use-case-content">
-                            <p><strong>Goal:</strong> Build companies by assembling autonomous business "blocks" (e.g.,
-                                Logistics, Billing) rather than writing monolithic code.</p>
-                            <p><strong>Sheep Advantage:</strong> <span class="highlight-text">Crader</span> exposes
-                                interlocking APIs instantly. <span class="highlight-text">Mycelium</span> guides agents
-                                to dynamically rewire dependencies when the architecture evolves.</p>
+                            <p><strong>The Problem:</strong> Using cloud coding assistants exposes your proprietary IP
+                                to external vendors.</p>
+                            <p><strong>The Fix:</strong> <span class="highlight-text">Crader</span> indexes your local
+                                codebase, creating a semantic map of your legacy systems without sending a single line
+                                of code to the cloud.</p>
+                            <p><strong>The Payoff:</strong> A tailored AI coding assistant that runs behind your
+                                firewall. Total privacy, maximum context.</p>
                         </div>
                     </div>
                 </div>
@@ -196,14 +270,17 @@
                 <div class="card use-case-card hidden">
                     <div class="use-case-number">02</div>
                     <div class="use-case-body">
-                        <h3>High-Frequency Feature Loop</h3>
-                        <p class="use-case-sub">Zero-Latency Feedback</p>
+                        <h3>The Air-Gapped Data Analyst</h3>
+                        <p class="use-case-sub">Global Intelligence, Local Privacy.</p>
                         <div class="use-case-content">
-                            <p><strong>Goal:</strong> Implement complex features in real-time without breaking the
-                                build.</p>
-                            <p><strong>Sheep Advantage:</strong> <span class="highlight-text">Mycelium</span>'s
-                                file-incremental indexing provides agents with immediate structural feedback, allowing
-                                them to fix regressions before the commit.</p>
+                            <p><strong>The Problem:</strong> You cannot send sensitive data (Healthcare/GDPR) to
+                                powerful LLMs for analysis.</p>
+                            <p><strong>The Fix:</strong> <span class="highlight-text">Crook</span> extracts only the
+                                structure (schema) of your data, stripping values. <span
+                                    class="highlight-text">Crader</span> uses the LLM to write the query, but the
+                                execution happens locally.</p>
+                            <p><strong>The Payoff:</strong> You get GPT-4 level reasoning on your data without the data
+                                ever leaving your secure server. Compliance by design.</p>
                         </div>
                     </div>
                 </div>
@@ -211,27 +288,17 @@
                 <div class="card use-case-card hidden">
                     <div class="use-case-number">03</div>
                     <div class="use-case-body">
-                        <h3>Data-Aware Reasoning</h3>
-                        <p class="use-case-sub">The "Full Stack" Agent</p>
+                        <h3>The Fluid Operations Manager</h3>
+                        <p class="use-case-sub">Logistics that thinks for itself.</p>
                         <div class="use-case-content">
-                            <p><strong>Goal:</strong> Resolve crashes caused by data state, not syntax.</p>
-                            <p><strong>Sheep Advantage:</strong> Agents use <span class="highlight-text">Crook</span> to
-                                inspect production data and correlate state anomalies (like NULLs) with logic gaps
-                                mapped by <span class="highlight-text">Crader</span>.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card use-case-card hidden">
-                    <div class="use-case-number">04</div>
-                    <div class="use-case-body">
-                        <h3>The "Archeologist" Migration</h3>
-                        <p class="use-case-sub">Legacy to Microservices</p>
-                        <div class="use-case-content">
-                            <p><strong>Goal:</strong> Extract clean services from undocumented monoliths.</p>
-                            <p><strong>Sheep Advantage:</strong> <span class="highlight-text">Grazer</span> recovers
-                                lost logic from PDFs. <span class="highlight-text">Crader</span> maps the spaghetti
-                                code. <span class="highlight-text">Crook</span> deduces hidden schema relationships.</p>
+                            <p><strong>The Problem:</strong> Supply chains break because ERPs are rigid and require
+                                constant human manual input.</p>
+                            <p><strong>The Fix:</strong> A fleet of agents where <span
+                                    class="highlight-text">Crook</span> monitors inventory, <span
+                                    class="highlight-text">Crader</span> decides when to reorder, and <span
+                                    class="highlight-text">Collie</span> manages the communication with suppliers.</p>
+                            <p><strong>The Payoff:</strong> A business process that self-corrects in real-time. From
+                                static database to active nervous system.</p>
                         </div>
                     </div>
                 </div>
@@ -240,7 +307,7 @@
     </section>
 
     <!-- Vision Section -->
-    <section id="vision" class="section vision">
+    <!-- <section id="vision" class="section vision">
         <div class="container">
             <div class="vision-header">
                 <h2>Orchestrating the Synthetic Workforce</h2>
@@ -261,7 +328,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
         <div class="container footer-content">

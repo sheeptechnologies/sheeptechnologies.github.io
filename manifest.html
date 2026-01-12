@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheep Manifest | The Infrastructure of Autonomy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <img src="assets/logo.png" alt="Sheep Logo" width="40" height="40">
+                <img src="assets/sheep_logo.png" alt="Sheep Text Logo" class="brand-text-logo" width="75" height="18">
+            </a>
+            <div class="nav-links">
+                <a href="#" class="manifest-nav-active">Manifesto</a>
+                <a href="index.html#stack">The Stack</a>
+                <a href="index.html#use-cases">Scenarios</a>
+                <a href="index.html#vision">Vision</a>
+            </div>
+            <a href="https://github.com/sheeptechnologies" target="_blank" class="btn-primary small nav-github-btn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="github-icon"
+                    style="display: block;">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                <span class="btn-text">GitHub</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="manifest-content">
+        <header class="manifest-header">
+            <h1>SHEEP MANIFEST</h1>
+            <div class="manifest-meta">Date: January 2026 | Author: Filippo, Founder</div>
+        </header>
+
+        <article class="manifest-body">
+            <section class="manifest-section">
+                <h2>0. Who I Am</h2>
+                <p>
+                    I’m Filippo, 25 years old. For the past decade, my life has been split between physics and
+                    programming. Today, observing the frenetic evolution of Artificial Intelligence, I see an ecosystem
+                    that is incredible but fragile. I see a powerful technology risking to become an inaccessible "black
+                    box," and I feel the urgency to build the technical primitives necessary to change its direction.
+                </p>
+            </section>
+
+            <section class="manifest-section">
+                <h2>1. The Crossroads of 2026: Access is not Control</h2>
+                <p>
+                    We are at a historic fork in the road. This isn’t just the classic "Open Source vs. Closed Source"
+                    battle; it is a question of <strong>engineering viability</strong>.
+                </p>
+                <p>
+                    If we limit ourselves to accessing models via APIs (OpenAI, Gemini, Claude), we are not building
+                    anything of our own. We are tenants of someone else's intelligence. We depend on their policies,
+                    their pricing, and their data management.
+                </p>
+                <p>
+                    The centralization of social networks taught us that without control over the infrastructure, we are
+                    vulnerable. Entrusting sensitive data—medical, financial, proprietary IP—to external black boxes is
+                    not just an ethical risk; it is an <strong>unacceptable operational risk</strong>.
+                </p>
+                <div class="manifest-highlight-box">
+                    Sheep was born to solve this practical problem: to provide the tools to make the alternative
+                    technically possible.
+                </div>
+            </section>
+
+            <section class="manifest-section">
+                <h2>2. The Thesis: Value lies in Middleware, not the Model</h2>
+                <p>
+                    Here is the heart of the Sheep vision: <strong>The model is the engine, but you must build the
+                        car.</strong>
+                </p>
+                <p>
+                    Tomorrow, the competitive advantage will not lie in owning the LLM with the highest IQ (that will
+                    become a commodity), but in the capacity to integrate that intelligence into your own processes
+                    through a proprietary architecture. Having a genius model is useless if it cannot read your local
+                    database or if it violates GDPR constraints.
+                </p>
+                <p>
+                    Our thesis is that we need <strong>Cognitive Middleware</strong>: a software layer that decouples
+                    Intelligence (the Model) from Execution (the Action).
+                </p>
+                <p>
+                    Do you want an assistant that writes code based on your internal libraries without handing your IP
+                    over to an external cloud?
+                    <br>
+                    Do you need to analyze sensitive clinical data using the power of AI, but guaranteeing that data
+                    never leaves your secure server?
+                </p>
+                <p>
+                    To do this, we don't need better "chats." We need better control infrastructure.
+                </p>
+            </section>
+
+            <section class="manifest-section">
+                <h2>3. What We Do: Primitives for Autonomy</h2>
+                <p>
+                    To realize this vision, we must be clear about our role in the stack.
+                </p>
+                <p>
+                    <strong>WE DO NOT develop LLMs</strong>: We do not compete on neural weights. There are already
+                    excellent engines out there.
+                    <br>
+                    <strong>WE DO NOT sell the "magic agent"</strong>: We do not offer pre-packaged digital employees.
+                </p>
+                <p>
+                    <strong>WE CREATE THE PRIMITIVES (TOOLKIT)</strong>. Sheep develops the Open-Source arsenal
+                    necessary to build autonomous intelligent systems. We provide the base modules to give LLMs eyes,
+                    hands, and secure memory.
+                </p>
+                <p>
+                    Imagine wanting to build your own Personal Copilot (<a href="index.html#stack">Crader</a>) or a
+                    Secure Data Analyst (<a href="index.html#stack">Crook</a>):
+                </p>
+                <ul>
+                    <li>We give you the tool to index the code or map the database schema.</li>
+                    <li>You connect the model you prefer (Local Llama, GPT-4, Mistral).</li>
+                    <li>The tool uses the model to generate logic, but execution happens on your systems, under your
+                        control.</li>
+                </ul>
+            </section>
+
+            <section class="manifest-section">
+                <h2>4. Why Open-Source Tools?</h2>
+                <p>
+                    An Open Source model without the tools to maneuver it is as useless as an engine without a steering
+                    wheel. True independence requires the capacity to inspect and modify the entire assembly line, not
+                    just the model.
+                </p>
+                <p>
+                    Sheep exists to make the Open alternative actionable. We provide free, modular, and agnostic tools
+                    so that a medical physicist, a student, or a startup can assemble a solution that:
+                </p>
+                <ul>
+                    <li>Respects privacy "by design."</li>
+                    <li>Does not depend on a monthly subscription to function.</li>
+                    <li>Belongs entirely to the person who built it.</li>
+                </ul>
+            </section>
+
+            <section class="manifest-section">
+                <h2>5. From Users to Architects</h2>
+                <p>
+                    The era of passive "prompting" is ending. The future belongs to those who can design complex
+                    cognitive systems. The name "Sheep" does not imply submission, but rather the nature of Distributed
+                    Systems (swarm intelligence): small, modular, numerous units that, if well-orchestrated, solve huge
+                    problems better than a single central monolith.
+                </p>
+                <p>
+                    We don't want you to be just a user. We want to enable a new class of <strong>System
+                        Architects</strong>. We build the infrastructural foundations. You bring the vision, the data,
+                    and the domain logic.
+                </p>
+                <div class="manifest-highlight-box">
+                    Control returns to those who write the code, not those who own the model.
+                </div>
+            </section>
+
+            <div class="manifest-footer">
+                Filippo<br>
+                Founder, Sheep.
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-cta">
+                <h3>Join the Flock.</h3>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sheep Technologies. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="mailto:info@sheeptechnologies.com">Email</a>
+                    <a href="https://github.com/sheeptechnologies" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/company/sheeptechnologies" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
