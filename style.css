@@ -453,63 +453,7 @@ a {
     font-size: 1rem;
 }
 
-/* Improved Engine Section (Mycelium) */
-.engine-section {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    border-radius: 12px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    position: relative;
-    overflow: hidden;
-}
 
-.engine-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--primary-accent);
-}
-
-.engine-label {
-    font-size: 0.65rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    display: block;
-    margin-bottom: 0.4rem;
-}
-
-.engine-display {
-    display: flex;
-    flex-direction: column;
-}
-
-.engine-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.engine-desc {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-.engine-link {
-    display: inline-block;
-    margin-top: 0.8rem;
-    font-size: 0.8rem;
-    color: var(--secondary-accent);
-    font-weight: 600;
-}
-
-.engine-link:hover {
-    text-decoration: underline;
-}
 
 .card-link.main-link {
     margin-top: auto;
