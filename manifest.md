@@ -2,65 +2,95 @@
 
 **Date:** January 2026 | **Author:** Filippo, Founder
 
+---
+
 ## 0. Who I Am
 
-I’m Filippo, 25 years old. For the past decade, my life has been split between physics and programming. Today, observing the frenetic evolution of Artificial Intelligence, I see an ecosystem that is incredible but fragile. I see a powerful technology risking to become an inaccessible "black box," and I feel the urgency to build the technical primitives necessary to change its direction.
+I'm Filippo, 25 years old. My life has been shaped by physics and programming. Today, observing the frenetic evolution of Artificial Intelligence, I see an ecosystem that is incredible but fragile.
 
-## 1. The Crossroads of 2026: Access is not Control
+What drives me is a concern: we are heading toward a future where AI power is concentrated in the hands of a few. The intelligence is there, but it's locked behind interfaces we don't control, policies we didn't choose, and infrastructure we can't inspect. This scares me — and it's why I started building.
 
-We are at a historic fork in the road. This isn’t just the classic "Open Source vs. Closed Source" battle; it is a question of **engineering viability**.
+Sheep is my attempt to change the direction, one primitive at a time.
 
-If we limit ourselves to accessing models via APIs (OpenAI, Gemini, Claude), we are not building anything of our own. We are tenants of someone else's intelligence. We depend on their policies, their pricing, and their data management.
+## 1. The Problem: Access is not Control
 
-The centralization of social networks taught us that without control over the infrastructure, we are vulnerable. Entrusting sensitive data—medical, financial, proprietary IP—to external black boxes is not just an ethical risk; it is an **unacceptable operational risk**.
+We are at a historic fork in the road. This isn't just the classic "Open Source vs. Closed Source" debate; it's a question of **engineering viability**.
 
-> Sheep was born to solve this practical problem: to provide the tools to make the alternative technically possible.
+The LLMs themselves — whether proprietary or open-weight — are not the core issue. Excellent models exist and will keep improving. The real problem is that **the applications built on top of them are all closed and proprietary**. If you want an AI assistant today, you must accept someone else's interface, their policies, their data handling. The intelligence is accessible, but the control layer isn't.
 
-## 2. The Thesis: Value lies in Middleware, not the Model
+The centralization of social networks taught us what happens when we don't own the infrastructure. Entrusting sensitive data — medical records, financial information, proprietary code — to external black boxes is not just an ethical risk; it's an **unacceptable operational risk**.
 
-Here is the heart of the Sheep vision: **The model is the engine, but you must build the car.**
+> Sheep exists to make the alternative technically possible.
 
-Tomorrow, the competitive advantage will not lie in owning the LLM with the highest IQ (that will become a commodity), but in the capacity to integrate that intelligence into your own processes through a proprietary architecture. Having a genius model is useless if it cannot read your local database or if it violates GDPR constraints.
+## 2. The Thesis: The Model is the Engine, You Build the Car
 
-Our thesis is that we need **Cognitive Middleware**: a software layer that decouples Intelligence (the Model) from Execution (the Action).
+Here's the core idea: the competitive advantage of tomorrow won't only lie in accessing the smartest LLM (that's becoming a commodity). It will increasingly depend on your ability to **integrate intelligence into your own systems** through architecture you control.
 
-Do you want an assistant that writes code based on your internal libraries without handing your IP over to an external cloud?
-Do you need to analyze sensitive clinical data using the power of AI, but guaranteeing that data never leaves your secure server?
+A genius model is useless if it can't read your internal database, can't respect your compliance requirements, or leaks your IP to an external cloud.
 
-To do this, we don't need better "chats." We need better control infrastructure.
+What's missing is **Cognitive Middleware**: a layer that decouples Intelligence (the Model) from Execution (the Action). Not another chatbot. Infrastructure.
 
-## 3. What We Do: Primitives for Autonomy
+## 3. What Sheep Actually Is
 
-To realize this vision, we must be clear about our role in the stack.
+Let's be concrete.
 
-**WE DO NOT develop LLMs**: We do not compete on neural weights. There are already excellent engines out there.
-**WE DO NOT sell the "magic agent"**: We do not offer pre-packaged digital employees.
+Sheep is a collection of **open-source libraries** designed for agentic development. They're built to be wrapped by MCP servers and integrated into existing company infrastructure.
 
-**WE CREATE THE PRIMITIVES (TOOLKIT)**. Sheep develops the Open-Source arsenal necessary to build autonomous intelligent systems. We provide the base modules to give LLMs eyes, hands, and secure memory.
+**We don't build LLMs.** Training foundation models requires resources and expertise we don't have — and others do it well.
 
-Imagine wanting to build your own Personal Copilot ([Crader](index.html#stack)) or a Secure Data Analyst ([Crook](index.html#stack)):
+**We don't sell pre-packaged "AI employees."** We're not in the business of magic agents that promise to replace your team.
 
-*   We give you the tool to index the code or map the database schema.
-*   You connect the model you prefer (Local Llama, GPT-4, Mistral).
-*   The tool uses the model to generate logic, but execution happens on your systems, under your control.
+**We build primitives.** Tools that give LLMs the ability to see your data, act on your systems, and remember context — all running on infrastructure you control.
 
-## 4. Why Open-Source Tools?
+These libraries are designed to work *with* frameworks you might already use (LangChain, LangGraph, CrewAI, etc.), not to replace them. Think of Sheep as the specialized tooling layer beneath your agent orchestration.
 
-An Open Source model without the tools to maneuver it is as useless as an engine without a steering wheel. True independence requires the capacity to inspect and modify the entire assembly line, not just the model.
+**Example use cases:**
 
-Sheep exists to make the Open alternative actionable. We provide free, modular, and agnostic tools so that a medical physicist, a student, or a startup can assemble a solution that:
+- A physicist who wants to run complex data analysis pipelines with AI assistance, without uploading datasets to external services.
+- A healthcare company that needs AI-powered document processing while guaranteeing GDPR compliance and data residency.
+- An enterprise that wants to build an internal Copilot for their codebase, avoiding per-seat costs and keeping proprietary code in-house.
 
-*   Respects privacy "by design."
-*   Does not depend on a monthly subscription to function.
-*   Belongs entirely to the person who built it.
+## 4. Why Open Source
 
-## 5. From Users to Architects
+An open-source model without open tools to orchestrate it is like an engine without a steering wheel.
 
-The era of passive "prompting" is ending. The future belongs to those who can design complex cognitive systems. The name "Sheep" does not imply submission, but rather the nature of Distributed Systems (swarm intelligence): small, modular, numerous units that, if well-orchestrated, solve huge problems better than a single central monolith.
+Sheep is open source because:
 
-We don't want you to be just a user. We want to enable a new class of **System Architects**. We build the infrastructural foundations. You bring the vision, the data, and the domain logic.
+- **Transparency matters.** If you're trusting software with sensitive data, you should be able to audit every line.
+- **Modularity wins.** Take what you need, ignore what you don't, extend what's missing.
+- **Independence is the point.** Your system shouldn't break because a vendor changed their pricing or ToS.
 
-> Control returns to those who write the code, not those who own the model.
+We're in the early stages. The libraries exist, the vision is clear, but we're still building traction and community. If you believe in this direction, there are ways to get involved (see below).
 
-Filippo
+## 5. What's Next
+
+We're exploring sustainability paths: R&D partnerships with companies who need custom tooling, managed hosting for MCP servers, and consulting for teams building agentic systems. The model is evolving — what won't change is the commitment to keeping the core open.
+
+The name "Sheep" isn't about following the herd. It's about **swarm intelligence**: small, modular, numerous units that — when well-orchestrated — solve problems better than a single monolith.
+
+We want to enable a new generation of **System Architects**. People who don't just prompt, but design. We build the foundations. You bring the vision, the data, the domain expertise.
+
+---
+
+## Get Involved
+
+**Use the tools:**
+- GitHub: [github.com/sheeptechnologies](https://github.com/sheeptechnologies)
+
+**Contribute:**
+- Check open issues, submit PRs, or propose new primitives
+- Join the discussion: [Discussions](https://github.com/orgs/sheeptechnologies/discussions)
+
+**Follow the journey:**
+- Twitter/X: [@_SheepOfficial_](https://x.com/_SheepOfficial_)
+- LinkedIn: [Sheep Technologies](https://www.linkedin.com/company/sheeptechnologies)
+
+**Talk to us:**
+- For partnerships, integrations, or just to say hi: info@sheeptechnologies.com
+
+---
+
+*Control belongs to those who build.*
+
+Filippo  
 Founder, Sheep.
